@@ -29,7 +29,7 @@ function currentLine(array) {
   // iterates thru array, appends ${i + 1}.array[value] to return statement.
   // if array.length === 0: return 'The line is currently empty'.
     if (array.length === 0) {
-      return `The line is currently empty.`
+      return `${currently} empty.`
     } else {
       for (let i = 0; i < array.length; i++) {
         if (array.length === 1) {
@@ -38,6 +38,8 @@ function currentLine(array) {
           currently += ` ${i + 1}. ${array[i]},`
         }
       }
-      return currently;
+      let final = currently.split('')
+      final.pop()
+      return final.join('')
     }
 }
