@@ -11,3 +11,14 @@ function takeANumber(currentLine, newName) {
     }
   }
 }
+
+
+function nowServing(katzDeliLine) {
+  // accepts an array of people, return array[0], then pops it off
+  // katzDeliLine = ['Ada'] -> "Currently serving Ada."
+  // if katzDeliLine.length === 0, return "There is nobody waiting to be served!"
+
+  return katzDeliLine.length === 0 ? `There is nobody waiting to be served!`
+    : katzDeliLine.length === 1 ? `Currently serving ${katzDeliLine.pop()}.`
+    : `Currently serving ${katzDeliLine.shift()}.`
+}
