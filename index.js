@@ -35,7 +35,7 @@ function currentLine(array) {
         if (array.length === 1) {
           currently += ` ${i + 1}. ${array[0]}`
         } else {
-          currently += ` ${i + 1}. ${array[0]}`
+          currently += ` ${i + 1}. ${array[i]}`
         }
       }
       return currently;
