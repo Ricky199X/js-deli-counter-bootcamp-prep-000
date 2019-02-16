@@ -1,0 +1,13 @@
+function takeANumber(currentLine, newName) {
+  let placeInLine = ''
+  // first push the new name in to the current line
+  currentLine.push(newName)
+  // then iterate thru the current line, use the values in the current line array to form the return statement
+  for (let i = 0; i < currentLine.length; i++) {
+    if (currentLine.length === 1) {
+      return `Welcome ${currentLine[0]}. You are number ${i + 1} in line.`
+    } else {
+      return `Welcome ${currentLine[currentLine.length - 1]}. You are number ${currentLine.length - 1 + 1} in line`
+    }
+  }
+}
