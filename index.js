@@ -22,3 +22,22 @@ function nowServing(katzDeliLine) {
     : katzDeliLine.length === 1 ? `Currently serving ${katzDeliLine.pop()}.`
     : `Currently serving ${katzDeliLine.shift()}.`
 }
+
+function currentLine(array) {
+  let currently = 'The line is currently:';
+  // accepts an array
+  // iterates thru array, appends ${i + 1}.array[value] to return statement.
+  // if array.length === 0: return 'The line is currently empty'.
+    if (array.length === 0) {
+      return `${currently} empty.`
+    } else {
+      for (let i = 0; i < array.length; i++) {
+        if (array.length === 1) {
+          currently += ` ${i + 1}. ${array[0]}`
+        } else {
+          currently += ` ${i + 1}. ${array[0]}`
+        }
+      }
+      return currently;
+    }
+}
