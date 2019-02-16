@@ -38,6 +38,8 @@ function currentLine(array) {
           currently += ` ${i + 1}. ${array[i]},`
         }
       }
-      return currently;
+      let final = currently.split('')
+      final.pop()
+      return final.join('')
     }
 }
